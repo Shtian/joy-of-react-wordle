@@ -3,6 +3,7 @@ import React from "react";
 export default function GuessInput({ handleNewGuess }) {
   return (
     <form
+      className="guess-input-wrapper"
       onSubmit={(e) => {
         e.preventDefault();
         handleNewGuess(e.target["guess-input"].value.toUpperCase());
