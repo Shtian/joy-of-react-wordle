@@ -5,7 +5,7 @@ import { WORDS } from "../../data";
 import { checkGuess } from "../../game-helpers";
 import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 import GuessResult from "../GuessResult";
-import Guess from "../Guess";
+import GuessInput from "../GuessInput";
 import Banner from "../Banner";
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
@@ -35,7 +35,7 @@ function Game() {
   return (
     <>
       <GuessResult guesses={guesses} />
-      <Guess handleNewGuess={handleNewGuess} isGameOver={isGameOver} />
+      <GuessInput handleNewGuess={handleNewGuess} isGameOver={isGameOver} />
       {isGameOver && (
         <Banner
           isAWin={gameState.won}

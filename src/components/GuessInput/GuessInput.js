@@ -1,21 +1,24 @@
 import React from "react";
 
-export default function Guess({ handleNewGuess, isGameOver }) {
+export default function GuessInput({ handleNewGuess, isGameOver }) {
+  // usestate for guess
   return (
     <form
       className="guess-input-wrapper"
       onSubmit={(e) => {
         e.preventDefault();
-        handleNewGuess(e.target["guess-input"].value.toUpperCase());
+        handleNewGuess(e.target["guess-input"].value);
         e.target["guess-input"].value = "";
       }}
     >
       <label htmlFor="guess-input">Enter guess:</label>
       <input
+        required
         type="text"
         name="guess-input"
         id="guess-input"
-        pattern="[A-Za-zæåøÆØÅ]{5}"
+        minLength={5}
+        maxLength={5}
         disabled={isGameOver}
       ></input>
     </form>
