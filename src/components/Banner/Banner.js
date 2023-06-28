@@ -23,9 +23,9 @@ function GameLostBanner({ answer }) {
 
 function Banner({ isAWin, answer, numOfGuesses }) {
   return isAWin ? (
-    <GameWonBanner numOfGuesses={numOfGuesses}></GameWonBanner>
+    <GameWonBanner numOfGuesses={numOfGuesses} />
   ) : (
-    <GameLostBanner answer={answer}></GameLostBanner>
+    <GameLostBanner answer={answer} />
   );
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function GuessInput({ handleNewGuess, isGameOver }) {
+export default function Guess({ handleNewGuess, isGameOver }) {
   return (
     <form
       className="guess-input-wrapper"

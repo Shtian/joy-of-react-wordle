@@ -1,7 +1,7 @@
 import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 import { range } from "../../utils";
 
-export default function Guesses({ guesses }) {
+export default function GuessResult({ guesses }) {
   const createEmptyPadding = (rows) => {
     return range(rows).map(() =>
       range(5).map(() => ({ letter: "", status: "" }))
